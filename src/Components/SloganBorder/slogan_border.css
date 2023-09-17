@@ -1,0 +1,68 @@
+.slogan-border
+{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slogan-border p
+{
+    color: rgba(255, 255, 255, 0.48);
+}
+
+.slogan-border div p
+{
+    font-family: Inter, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+
+.slogan-border span
+{
+    font-size: 58.83px;
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: justify;
+}
+
+.slogan-border div span p
+{
+    display: inline;
+    font-size: 48.83px;
+}
+
+.slogan-border-text
+{
+    width: 570px;
+    margin-bottom: 48px;
+    margin-top: 100px;
+}
+
+.slogan-feedback
+{
+    padding: 26px 42px 26px 42px;
+    font-size: 26px;
+    margin-top: 48px;
+    display: flex;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    width: 449px;
+    background: linear-gradient(#000000, #000000) padding-box,
+    linear-gradient(to right, #9c20aa, #fb3570) border-box;
+}
+
+.sphere
+{
+    width: 740px;
+    height: 700px;
+    margin-left: 50px;
+}

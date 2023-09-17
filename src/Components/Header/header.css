@@ -1,0 +1,44 @@
+header nav div, header nav ul
+{
+    display: flex;
+    align-items: center;
+
+}
+header nav
+{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a
+{
+    color: rgba(255, 255, 255, 0.48);
+    font-family: Inter, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    padding: 16px;
+    padding-left: 0px;
+}
+
+.main-link
+{
+    margin-right: 32px;
+}
+
+.feedback
+{
+    background-image: linear-gradient(90deg,#FF9776, #FE3D00);
+    background-clip: text;
+    color: transparent;
+}
+
+header nav ul li
+{
+    margin-right: 21px;
+}
+
