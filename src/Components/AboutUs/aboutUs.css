@@ -1,0 +1,27 @@
+.slogan-border-text p{
+    
+    width: 1124px;
+    height: 943px;
+    flex-shrink: 0; 
+    color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */ 
+    margin-bottom: 100px;
+}
+
+.slogan-border-text h1{
+
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48.83px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 73.245px */ 
+    margin-bottom: 24px;
+    margin-top: 24px;
+    
+}
+

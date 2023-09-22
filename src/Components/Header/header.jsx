@@ -6,16 +6,16 @@ function Header()
         <header>
             <nav>
                 <div>
-                    <Link to={'#'} className={'main-link'}>ГЛАВНАЯ</Link>
+                    <Link to={'/home'} className={'main-link'}>ГЛАВНАЯ</Link>
                     <ul>
                         <li>
-                            <Link to={'#'}> НАС</Link>
+                            <Link to={'/aboutUs'}> О НАС</Link>
                         </li>
                         <li>
-                            <Link to={'#'}>КОНТАКТЫ</Link>
+                            <Link to={'/sign_up'}>ВОЙТИ</Link>
                         </li>
                         <li>
-                            <Link to={'#'}>ПОРТФОЛИО</Link>
+                            <Link to={'/cards'}>ПРОДУКЦИЯ</Link>
                         </li>
                     </ul>
                 </div>

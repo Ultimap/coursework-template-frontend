@@ -2,7 +2,6 @@ header nav div, header nav ul
 {
     display: flex;
     align-items: center;
-
 }
 header nav
 {
@@ -10,12 +9,11 @@ header nav
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 header a
 {
-    color: rgba(255, 255, 255, 0.48);
+    color: rgba(0, 0, 0, 0.48);
     font-family: Inter, sans-serif;
     font-size: 26px;
     font-style: normal;
@@ -32,13 +30,13 @@ header a
 
 .feedback
 {
-    background-image: linear-gradient(90deg,#FF9776, #FE3D00);
+    /* background-image: linear-gradient(90deg,#FF9776, #FE3D00);
     background-clip: text;
-    color: transparent;
+    color: transparent; */
+    color: black;
 }
 
 header nav ul li
 {
     margin-right: 21px;
 }
-

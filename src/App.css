@@ -1,6 +1,6 @@
 body,html
 {
-    background: #000;
+    background: #C9DEFF;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -8,4 +8,40 @@ body,html
 *
 {
     color: white;
+}
+
+.page{
+    position: absolute;
+}
+
+.page-enter-active{
+    animation: fade-in 1s forwards;
+}
+
+.page-exit-active{
+    animation: fade-in 1s forwards;
+}
+
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
 }

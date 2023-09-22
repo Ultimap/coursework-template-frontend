@@ -1,0 +1,95 @@
+.text{
+    width: 872px;
+    height: 270px;
+    flex-shrink: 0; 
+    margin-top: 240px;
+    width: 1440px;
+    flex-shrink: 0; 
+    
+}
+
+.text h1{
+    width: 216px;
+    height: 61px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 35px;
+}
+
+.text h2{
+    width: 872px;
+    height: 57px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 35px;
+}
+
+.text p{
+    width: 305px;
+    height: 80px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ellipse{
+    width: 861px;
+    height: 339px;
+    flex-shrink: 0; 
+    margin-top: 150px;
+    /* margin-left: 352px; */
+    /* margin-bottom: 150px; */
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.project{
+    padding-left: 150px;
+    
+    transition: all 0.3s ease;
+}
+
+.aboutUs{
+    transition: all 0.3s ease;
+
+}
+
+
+.aboutUs:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.project:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);  
+}
+
+.ellipse p{
+    text-align: center;
+}
+
+
+.projectP {
+    margin-left: 170px;
+}
+.name {
+    background-image: url(../../image/back.png);
+    width: 1440px;
+}
