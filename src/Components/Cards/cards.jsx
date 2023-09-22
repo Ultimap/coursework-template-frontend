@@ -3,11 +3,11 @@ import {Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import prod from "../../image/Card.png"
 const Cards = () => {
-    const [cards, setCards] = useState([]);
+    const [items, setItems] = useState([]);
     useEffect(() =>{
-        fetch('http://192.168.0.107:8000')
+        fetch('http://192.168.0.107:8000/items')
             .then(res => res.json())
-            .then(data => setCards(data))
+            .then(data => setItems(data))
     }, []);
     return (
         <>
@@ -16,18 +16,32 @@ const Cards = () => {
             <h1>Наша продукция</h1>
         </div>
             <ul>
+                {
+                items.map(item => (
                 <li>
                 <Link to = "/item">
+                    <img key ={item.img} class ="product_img" src={`/tovar_image/${item.img}`}/>
                     <img class ="product_img" src ={prod}/>
                     <p class = "product_name">АФУ специального назначения </p>
+                    <Link key={ item.id} to ={`/item/${item.id}`}><p key={item.product_name} class = "product_name">{item.product_name}</p></Link>
                 </Link>
-
-                    <div className="product_menu">
-
-                    </div>
                 </li>
+                    ))
+                }
             </ul>
+        </div> 
+        </>
+     );
+}
+export default Cards;
 
+
+
+                    {/* <div className="product_menu">
+                        <Link key={item.id} to={`/item/${card.id}`}><p key={item.cost}>{item.cost}</p></Link>
+                    </div> */}
+
+                    
             {/* <ul>
                 {  
                     cards.map(card => (
@@ -41,8 +55,3 @@ const Cards = () => {
                     ))
                 }
             </ul> */}
-        </div> 
-        </>
-     );
-}
-export default Cards;

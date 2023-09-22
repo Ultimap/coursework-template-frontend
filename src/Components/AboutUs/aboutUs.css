@@ -20,8 +20,45 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 73.245px */ 
+    width: 150px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Lora', serif;
+    color: #e76f51;
     margin-bottom: 24px;
     margin-top: 24px;
-    
+    position: relative;
+    transition: color 0.8s, text-shadow 0.8s;
+    display: grid; /* для центрирования дочерних ссылок */
+    place-items: center; /* центрируем дочерние ссылки */
 }
 
+
+.slogan-border-text h1::after{
+    content: '';
+    display: block;
+    position: absolute; /* позиционируем относительно ссылки */
+    bottom: 15%;
+    background: #2a9d8f;
+    height: 20%; /* высота относительно высоты ссылки */
+    width: 0%; /* изначально ширина полосы подчеркивания равна 0% */
+    z-index: -1; /* ставим полосу подчеркивания позади текста ссылки */
+    transition: width 0.8s, opacity 0.8s, box-shadow 0.8s; /* для плавного изменения ширины, прозрачности, тени(свечения) */
+    border-radius: 100px;
+    opacity: 0; /* изначально полоса полностью прозрачна */
+    box-shadow: 0 0 16px rgba(42,157,143,0);
+}
+
+
+.slogan-border-text h1:hover {
+    color: #f4a261;
+    text-shadow: 0 0 16px rgba(241, 0, 0, 0.64);
+  }
+
+  .slogan-border-text h1:after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  

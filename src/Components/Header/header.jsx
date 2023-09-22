@@ -20,10 +20,9 @@ function Header()
                     </ul>
                 </div>
                 <div>
-                    <Link className={'feedback'} to={'#'}>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</Link>
+                    <Link className={'feedback'} to={'/add_item'}>Создать объект</Link>
                 </div>
             </nav>
-
         </header>
     )
 }

@@ -1,0 +1,44 @@
+.object{
+    font-size: 20px;
+    margin-top: 80px;
+    display: flex;
+}
+
+
+
+.NameAndImg input{
+    margin-bottom: 23px;
+    background-color: black;
+    width: 271px;
+    height: 47px;
+    margin-right: 56px;
+    
+}
+
+.description{
+    background-color: black;
+    width: 783px; 
+    height: 670px;
+    flex-shrink: 0;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    outline: none;
+}
+
+.CostAndCategory{
+    margin-top: 34px;
+}
+
+.characteristics{
+    margin-top: 60px;
+    background-color: #000;
+    display: block;
+    width: 605px;
+    height: 434px;
+}
+
+.button{
+    color: black;
+}

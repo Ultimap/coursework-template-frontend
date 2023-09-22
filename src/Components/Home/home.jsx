@@ -10,7 +10,6 @@ function Home() {
                 {/* <img src={background}/> */}
                 <h1>СОНИИР</h1>
                 <h2>Самарский филиал ФГБУ НИИ Радио</h2>
-                <p>Подробнее</p>  
             </div>
             <div className='ellipse'>
                 <Link to = "/aboutUs">
@@ -18,8 +17,10 @@ function Home() {
                 <p>О НАС</p>
                 </Link>
                 <Link to = "/cards">
-                <img className='project' src={project}/>
-                <p className='projectP'>ПРОДУКЦИЯ</p>
+                    <div className='novigation'>
+                        <img className='project' src={project}/>
+                        <p>ПРОДУКЦИЯ</p>
+                    </div>
                 </Link>
             </div>
         </div>

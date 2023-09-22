@@ -9,7 +9,7 @@ import Sign_up from './Components/Sign_up/sign_up';
 import Item from './Components/Item/item';
 import Log_in from './Components/Log_in/log_in';
 import Profile from './Components/Profile';
-// import Log_in from './Components/Log_in/log_in';
+import Add_item from './Components/Add_item/add_item';
 function App() {
 
   const routes = [
@@ -29,7 +29,7 @@ function App() {
           <Route path='/item' element={<Item/>}/>
           <Route path='/log_in' element={<Log_in/>}/>
           <Route path='/me' element={<Profile />}/>
-          {/* <Route path='/log_in' element={<Log_in/>}/> */}
+          <Route path='/add_item' element={<Add_item />}/>
     </Routes>
     
     </>
