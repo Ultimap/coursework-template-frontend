@@ -1,7 +1,9 @@
 import "./cards.css"
 import {Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
-import prod from "../../image/Card.png"
+import mark from '../../image/mark.png'
+
+
 const Cards = () => {
     const [items, setItems] = useState([]);
     useEffect(() =>{
@@ -9,6 +11,26 @@ const Cards = () => {
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
+    const handleDelete = async (itemId) => {
+        try {
+            const jwt = localStorage.getItem('jwt');
+            const response = await fetch(`http://192.168.0.107:8000/items/${itemId}/delete`, {
+                method: 'DELETE',
+                headers: {
+                    Authorization: `Bearer ${jwt}`,
+                },
+            });
+    
+            if (response.ok) {
+                // Если удаление прошло успешно, обновите список объектов
+                setItems(items.filter(item => item.id !== itemId));
+            } else {
+                console.error('Ошибка при удалении объекта');
+            }
+        } catch (error) {
+            console.error('Сетевая ошибка:', error);
+        }
+    };
     return (
         <>
         <div class = "Card_Product">
@@ -19,12 +41,11 @@ const Cards = () => {
                 {
                 items.map(item => (
                 <li>
-                <Link to = "/item">
-                    <img key ={item.img} class ="product_img" src={`/tovar_image/${item.img}`}/>
-                    <img class ="product_img" src ={prod}/>
-                    <p class = "product_name">АФУ специального назначения </p>
-                    <Link key={ item.id} to ={`/item/${item.id}`}><p key={item.product_name} class = "product_name">{item.product_name}</p></Link>
-                </Link>
+                <img className="mark" src={mark} onClick={() => handleDelete(item.id)} />
+                <Link key = {item.id} to ={`/item/${item.id}`}>
+                    <img key ={item.img} class ="product_img tilt-effect" src={`http://192.168.0.107:8000/img/${item.img}`}/>
+                    <Link key={item.id}><p key={item.name} class = "product_name">{item.name}</p></Link>
+                </Link>  
                 </li>
                     ))
                 }
@@ -47,7 +68,7 @@ export default Cards;
                     cards.map(card => (
                         <li>
                             <img key ={card.img} class ="product_img" src={`/tovar_image/${card.img}`}/>
-                            <Link key={card.id} to ={`/item/${card.id}`}><p key={card.product_name} class = "product_name">{card.product_name}</p></Link>
+                            
                             <div class="product_menu">
                                 <Link key={card.id} to={`/item/${card.id}`}><p key={card.cost}>{card.cost}</p></Link>
                             </div>

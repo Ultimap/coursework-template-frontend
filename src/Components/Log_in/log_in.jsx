@@ -48,9 +48,7 @@ const Log_in = () => {
       <form onSubmit={handleSubmit}>
         <input type="text" value={login} onChange={handleLoginChange} placeholder="Login" />
         <input type="password" value={password} onChange={handlePasswordChange} placeholder="Password" />
-        <Link to ="/me">
         <button type="submit">Войти</button>
-        </Link>
       </form>
     </div>
   );

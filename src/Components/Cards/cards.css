@@ -14,20 +14,21 @@
     height: 39px; 
   }
   
-  .Card_Product .product_img{
+  .Card_Product .product_img {
     width: 385px;
     height: 380px;
     border-radius: 15px;
     object-fit: cover;
     margin-top: 80px;
+  }
 
+  .tilt-effect{
+    transition: transform 0.3s ease; 
   }
   
   .Card_Product ul{
     display: flex;
     flex-wrap: wrap;
-    
-    width: 712px;
   }
   .Card_Product li
   {
@@ -35,15 +36,18 @@
     margin-bottom: 92px;
     margin-left: 0px;
     font-size: 24px;
+    margin-left: 24px;
   }
   
   .product_name{
-    display: flex;
+    /* display: flex; */
+    margin: 0 auto;
     margin-bottom: 50px;
     font-size: 24px;
     text-align: center;
     color: black;
     margin-top: 16px;
+    width: 300px;
   }
   
   .product_menu p{
@@ -105,3 +109,8 @@
     margin-bottom: 18px;
   }
 
+.mark{
+  position: absolute;
+  width: 50px; 
+  margin-top: 80px;
+}

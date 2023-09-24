@@ -11,6 +11,8 @@
 }
 
 .item img{
+    height: 800px;
+    object-fit: cover;
     width: 1232px;
     margin-left: 100px;
 }
