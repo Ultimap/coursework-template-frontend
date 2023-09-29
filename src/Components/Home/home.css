@@ -57,7 +57,19 @@
 
 .novigation{
     
-    margin-left: 800px;
+    margin-left: 270px;
+    margin-right: 270px;
+}
+
+.profile_img{
+    transition: all 0.3s ease;
+}
+
+
+.profile_img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .project{

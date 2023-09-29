@@ -35,20 +35,3 @@
     color:black;
   }
 
-.createObject button{
-  font-size: 24px;
-  background-color: black;
-  margin-top: 40px;
-  margin-left: 580px;
-  border-radius: 20px;
-  padding: 10px;
-  align-items: center;
-  position: absolute;
-  transition: all 0.3s ease;
-}
-
-.createObject button:hover{
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
-}

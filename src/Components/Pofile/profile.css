@@ -8,4 +8,26 @@
     font-size: 48px;
     color:black;
     margin-top: 80px;
+    margin-bottom: 23px;
 }
+
+.user_items{
+    width: 470px;
+    height: 470px;
+    display: flex;
+    object-fit: cover;
+}
+
+.user_items li{
+    margin-right: 67px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    font-size: 24px;
+    margin-left: 24px;
+    
+}
+
+.user_items ul {
+    display: flex;
+    flex-wrap: wrap;
+  }

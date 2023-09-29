@@ -41,7 +41,7 @@
 
 .Description p{
     width: 555px;
-    height: 423px;
+    height: 723px;
 }
 
 .Characteristics{
@@ -64,7 +64,8 @@
 }
 
 
-.baton h1{
+
+.baton button{
     text-align: center;
     color: black;
     font-size: 24px;
@@ -74,6 +75,13 @@
     padding: 10px;
     width: 200px;
     margin-left: 620px;
+    transition: all 0.3s ease;
+  }
+  
+  .baton button:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .CAC p{
@@ -83,3 +91,8 @@
     margin-top: -10px;
     margin-bottom: 30px;
 }
+
+.CAC{
+    margin-top: 250px;
+}
+

@@ -21,18 +21,18 @@ function App() {
 
   return (
     <>
-    <Header/>
-    <Routes>
-          <Route path='/home' element={<Home/>}/>
-          <Route path='/aboutUs' element={<AboutUs/>}/>
-          <Route path='/cards' element={<Cards/>}/>
-          <Route path='/sign_up' element={<Sign_up />}/>
-          <Route path='/item/:id' element={<Item/>}/>
-          <Route path='/log_in' element={<Log_in/>}/>
-          <Route path='/me' element={<Profile />}/>
-          <Route path='/add_item' element={<Add_item />}/>
-    </Routes>
-    
+      <Header />
+      <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/cards" element={<Cards />} />
+        <Route path="/sign_up" element={<Sign_up />} />
+        <Route path="/item/:id" element={<Item />} />
+        <Route path="/log_in" element={<Log_in />} />
+        <Route path="/me" element={<Profile />} />
+        <Route path="/add_item" element={<Add_item />} />
+      </Routes>
     </>
   );
 }

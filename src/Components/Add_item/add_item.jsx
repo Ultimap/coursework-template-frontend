@@ -26,8 +26,8 @@ const Add_item = () => {
     const jwt = localStorage.getItem('jwt');
     // Отправляем запрос на сервер с использованием fetch или другой библиотеки для HTTP-запросов
     try {
-
-      const response = await fetch('http://192.168.0.107:8000/items/add', {
+      
+      const response = await fetch('http://127.0.0.1:8000/items/add', {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },

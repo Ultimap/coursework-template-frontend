@@ -2,6 +2,7 @@ import './home.css'
 import AboutUs from '../../image/Ellipse 1.png'
 import project from '../../image/Ellipse 1(1).png'
 import { Link } from 'react-router-dom';
+import me from '../../image/profile.png'
 // import background from '../../image/back.png'
 function Home() {
     return (
@@ -21,6 +22,12 @@ function Home() {
                         <img className='project' src={project}/>
                         <p>ПРОДУКЦИЯ</p>
                     </div>
+                </Link>
+                <Link to = '/me'>
+                <div className='profile_me'>
+                    <img className='profile_img' src={me}/>
+                    <p>ПРОФИЛЬ</p>
+                </div>
                 </Link>
             </div>
         </div>

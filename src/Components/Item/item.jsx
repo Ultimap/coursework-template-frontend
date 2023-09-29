@@ -6,16 +6,45 @@ import itemIMG from "../../image/изображение 4(1).png"
 const Item = () => {
     const {id} = useParams(); 
     const [item, setItem] = useState([]);
+    const [orderStatus, setOrderStatus] = useState(null);
     useEffect(() =>{
-        fetch(`http://192.168.0.107:8000/items/${id}`)
+        fetch(`http://127.0.0.1:8000/items/${id}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, []);
+    const jwt = localStorage.getItem('jwt')
+    const handleOrderClick = () => {
+        fetch("http://127.0.0.1:8000/auth/add_basket", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${jwt}`,
+          },
+          body: JSON.stringify({
+            item: item.id,
+           
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success) {
+              setOrderStatus("Товар успешно добавлен в корзину.");
+            } else {
+              setOrderStatus("Произошла ошибка при добавлении товара в корзину.");
+            }
+          })
+          .catch((error) => {
+            console.error("Ошибка при отправке заказа:", error);
+            setOrderStatus("Произошла ошибка при добавлении товара в корзину.");
+          });
+      };
+
+    
     return ( 
         <>
             <div className='item'>
                 <h1 >{item.name}</h1>
-                <img key={item.img} src ={`http://192.168.0.107:8000/img/${item.img}`}></img>
+                <img key={item.img} src ={`http://127.0.0.1:8000/img/${item.img}`}></img>
             </div>
             <div className='Discription'>
                 <div className='Description'>
@@ -34,8 +63,11 @@ const Item = () => {
                 <p key={item.cost}>Цена: {item.cost}</p>
                 <p key={item.quantity}>Количество: {item.quantity}</p>
             </div>
-            <div className='baton'>
-                <h1>ЗАКАЗАТЬ</h1>
+            <div className="baton">
+            <button type="button" onClick={handleOrderClick}>
+                ЗАКАЗАТЬ
+            </button>
+            {orderStatus && <p>{orderStatus}</p>}
             </div>
         </>
      );

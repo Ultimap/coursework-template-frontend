@@ -28,7 +28,7 @@ const Sign_up = () => {
       password: password,
     };
 
-    fetch('http://192.168.0.107:8000/auth/registration', {
+    fetch('http://127.0.0.1:8000/auth/registration', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
